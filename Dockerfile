@@ -1,4 +1,5 @@
-FROM tomcat:latest
-ADD ./MyWebApp/target/MyWebApp.war /usr/local/tomcat/webapps/ 
-EXPOSE 8080
+FROM tomcat
+COPY MyWebApp.war /usr/local/tomcat/webapps
 CMD ["catalina.sh", "run"]
+
+
